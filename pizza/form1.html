@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form1</title>
+  </head>
+  <body>
+    <h1>Black Goose Bistro | Pizza-on-Deman</h1>
+    <p>
+      Our 12" wood-fired pizzas are available for delivery. Build your <br />
+      custom pizza and we'll delivery it within an hour
+    </p>
+    <form action="form2.html">
+    <p>Your Information</p>
+    <p style="line-height: 10px">
+      <label for="" style="margin-top: 2px">Name : <input type="text" /></label><br /><br />
+      <label for="" style="margin-top: 2px">Address : <input type="text" /></label><br /><br />
+      <label for="" style="margin-top: 2px">Telepon Number : <input type="text" /></label><br /><br />
+      <label for="" style="margin-top: 2px">Email : <input type="text" /></label><br /><br />
+      <label for="" style="margin-top: 2px"
+        >Delivery Instructions : <br /><br />
+        <textarea name="" id="" cols="30" rows="10"></textarea></label
+      ><br /><br />
+    </p>
+    <p></p>
+    <p>Pizza Type (Choose 1)</p>
+    <ol style="list-style: none">
+      <li><input type="radio"  value="WhiteClassic" />White Classic</li>
+      <li><input type="radio"  value="MultiGrain" />Multi Grain</li>
+      <li><input type="radio"  value="CheeseStuffedCrust" />Cheese Stuffed Crust</li>
+      <li><input type="radio"  value="GluttenFree" />Glutten Free</li>
+    </ol>
+    <p>Topping (Choose 1)</p>
+    <ol style="list-style: none">
+      <li><input type="checkbox"  value="RedSauce" />Red Sauce</li>
+      <li><input type="checkbox"  value="WhiteSauce" />White Sauce</li>
+      <li><input type="checkbox"  value="MozzarellaCheese" />MozzarellaCheese</li>
+      <li><input type="checkbox"  value="Pepperoni" />Pepperoni</li>
+      <li><input type="checkbox"  value="Mushrooms" />Mushrooms</li>
+      <li><input type="checkbox"  value="Peppers" />Peppers</li>
+      <li><input type="checkbox"  value="Anchovies" />Anchovies</li>
+    </ol>
+
+    <form action="/action_page.php" method="post">
+      <div>
+        <p>
+          Quantity:
+          <select name="JumlahPizza">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+        </p>
+      </div>
+
+      <div>
+        <form action="form2.html">
+          <input type="submit" value="Take Your Pizza"></input> <input type="reset" value="Refresh" />
+        </form>
+      </div>
+    </form>
+</form>
+  </body>
+</html>
