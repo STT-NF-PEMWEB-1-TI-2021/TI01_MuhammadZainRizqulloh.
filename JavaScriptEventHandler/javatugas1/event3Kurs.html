@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Menghitung Kurs</title>
+
+    <style>
+      .content {
+        background-color: rgba(255, 99, 71, 0.356);
+        width: fit-content;
+        padding: 20px;
+      }
+
+      .kotak {
+        background-color: rgba(127, 255, 212, 0.452);
+        padding: 10px;
+        max-width: fit-content;
+      }
+
+      table{
+        border: 1px solid;
+        background-color: white;
+      }
+
+      fieldset{
+        padding: 10px;
+        max-width: 370px;
+      }
+
+      th{
+        border: 1px solid;
+        background-color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <br />
+    <h2>USD to Rupiah (1 USD = Rp.14.340)</h2>
+    <br />
+    <div class="content">
+      Enter USD:
+      <input type="number" value="" id="nomor" />
+      <br /><br />
+      <button onclick="kursrp()">Enter</button> :
+      <span id="hasilkonversi"></span>
+    </div>
+
+    <script>
+      function kursrp() {
+        var datausd = document.getElementById("nomor").value;
+        document.getElementById("hasilkonversi").innerHTML =
+          "Rp. " + datausd * 14340.0;
+      }
+
+
+    </script>
+
+   
+  </body>
+</html>
