@@ -1,0 +1,115 @@
+
+   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurs</title>
+    <script>
+      function fungsiKurs() {
+        let pilihan = document.getElementById("pilihanKurs").value;
+        let bil1 = Number(document.getElementById("nilaiAwal").value);
+        let bil2 = Number(document.getElementById("nilaiAkhir").value);
+
+        let kurs;
+        if (pilihan == "dollar") {
+          kurs = bil1 * 9915;
+        } else if (pilihan == "dollarsng") {
+          kurs = bil1 * 13472;
+        } else if (pilihan == "ringgit") {
+          kurs = bil1 * 874;
+        } else if (pilihan == "yen") {
+          kurs = bil1 * 120;
+        } else if (pilihan == "euro") {
+          kurs = bil1 * 15888;
+        } else {
+          kurs = bil1 * 3592;
+        }
+        document.getElementById("nilaiAkhir").value = "Rp. " + kurs;
+      }
+    </script>
+
+    <style>
+
+      *{
+          margin: 0;
+          padding: 0;
+      }  
+
+      body{
+          padding: 10px;
+      }
+      table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      .tabelnilai {
+        border: 2px solid black;
+      }
+      .fs {
+        padding: 10px;
+        background-color: khaki;
+      }
+      .form {
+        width: fit-content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="form" class="form">
+      <fieldset class="fs">
+        <legend>Kurs Rupiah ke- Banyak</legend>
+        <table class="tabelnilai">
+          <tr>
+            <th>Nominal Uang</th>
+            <th>Valas</th>
+            <th>Nilai Rupiah</th>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="number"
+                id="nilaiAwal"
+                value=""
+                onchange="fungsiKurs()"
+              />
+            </td>
+            <td>
+              <select id="pilihanKurs">
+                <option value="dollar">Dollar US</option>
+                <option value="dollarsng">Dollar Singapore</option>
+                <option value="ringgit">Ringgit Malaysia</option>
+                <option value="yen">Yen Jepang</option>
+                <option value="euro">Euro</option>
+                <option value="sar">Riyal Arab Saudi</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="nilaiAkhir"
+                value=""
+                onchange="fungsiKurs()"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <button style="background-color: khaki; margin-top: 10px;" onclick="fungsiKurs()">enter</button>
+  </body>
+</html>

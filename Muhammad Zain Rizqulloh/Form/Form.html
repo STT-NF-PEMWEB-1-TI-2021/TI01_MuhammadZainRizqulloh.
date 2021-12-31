@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper-login {
+    width: 100%;
+    height: 100vh;  
+    background-color: khaki;
+}
+
+.container-login {
+    padding: 20px 20px;
+    width: 300px;
+}
+
+h1 {
+    color: rgb(55, 52, 41);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input {
+    border: solid black 2px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+button {
+    background-color: rgb(55, 52, 41);
+    border: solid black 2px;
+    background-color: rgb(163, 157, 97);
+    padding: 10px 130px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+button:hover {
+    opacity: .5;
+    transition: .3s;
+    cursor: pointer;
+}
+
+p {
+    font-size: 12px;
+    color: #333;
+}
+
+#error {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: rgba(232, 43, 84, 0.755);
+    width: 300px;
+    color: #fff;
+    padding: 20px;
+    display: none;
+}
+
+.tampilanError {
+    color: #f00;
+}
+
+.container-adm {
+    padding: 20px;
+}
+
+table tr td {
+    padding: 10px;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrap1" class="wrapper-login">
+        <div class="container-login">
+            <div class="login-input">
+                <div>
+                    <small style="display: none;" id="err1" class="tampilanError">Nama wajib diisi</small>
+                    <small style="display: none;" id="err1_2" class="tampilanError">Nama maksimal 30 karakter!</small>
+                    <input type="text" name="nama" id="nama" placeholder=" Nama Pelanggan* ">
+                </div>
+                <div>
+                    <small style="display: none;" id="err2" class="tampilanError">Email wajib diisi</small>
+                    <small style="display: none;" id="err2_2" class="tampilanError">Format Email tidak sesuai</small>
+                    <input type="email" name="email" id="email" placeholder=" Email* ">
+                </div>
+                <div>
+                    <small style="display: none;" id="err3" class="tampilanError">Jam Keberangkatan wajib diisi</small>
+                    <small style="display: none;" id="err3_2" class="tampilanError">Jam Keberangkatan melebihi
+                        24.00!</small>
+                    <input type="number" name="jam" id="jam" placeholder=" Jam Keberangkatan* ">
+                </div>
+                <div>
+                    <small style="display: none;" id="err4" class="tampilanError">Tujuan Keberangkatan wajib
+                        diisi!</small>
+                    <input type="text" name="tujuan" id="tujuan" placeholder=" Tujuan Keberangkatan*  ">
+                </div>
+                <div>
+                    <small style="display: none;" id="err5" class="tampilanError">Jumblah Tiket wajib diisi</small>
+                    <small style="display: none;" id="err5_2" class="tampilanError">Jumblah Tiket 10!</small>
+                    <input type="number" name="tiket" id="tiket" placeholder=" Jumblah Ticket* ">
+                </div>
+                <button id="kirim" class="send-btn" type="submit" value="kirim" onclick="cekValidasi();">Login</button>
+                <div id="error">Username / Password anda salah! <span style="margin-left: 20px; cursor: pointer;"
+                        onclick="closeLah();"></span></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="wrap2" class="wrapper-login" style="display: none;">
+        <div class="container-adm">
+            <h1>Selamat, Sudah Berhasil</h1>
+            <table>
+                <tbody style="text-align: left; padding: 5px;">
+                    <tr>
+                        <td>Nama Pelanggan</td>
+                        <td id="h_1"></td>
+                    <tr>
+                        <td>Jadwal Keberangkatan</td>
+                        <td id="h_2"></td>
+                    </tr>
+                    <td>Jam Keberangkatan</td>
+                    <td id="h_3"></td>
+                    <tr>
+                        <td>Tujuan Keberangkatan</td>
+                        <td id="h_4"></td>
+                    </tr>
+                    <td>Tiket</td>
+                    <td id="h_5"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="autentikasi.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        .kotak{
+            width: 300px; 
+            position: fixed; 
+            bottom: 0; 
+            right: 1; 
+            border: 1px solid black; 
+            padding: 2px;
+            background-color: khaki;
+        }
+    </style>
+    <script>
+        function Chat(){
+            let text = document.getElementById("inputan").value;
+            let chat = document.createElement("section");
+            chat.innerHTML = text;
+            document.getElementById("chatBox").appendChild(chat);
+        }
+    </script>
+</head>
+<body style="height: 800px;">
+    <div class="kotak">
+        <section class="sec1" style="height: 200px; width: 100%;">
+            <section id="chatBox" style="display: flex; flex-direction: column; flex-wrap: nowrap;"></section>
+        </section>
+        <section>
+            <input type="text" id="inputan" style="width: 80%;">
+            <button id="kirim" onclick="Chat()">Send</button>
+        </section>
+    </div>
+</body>
+</html>
