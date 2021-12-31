@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      position: absolute;
+      display: none;
+      margin-right: 300px;
+
+    }
+
+  </style>
+  <body>
+    <div class="warna">
+      <select
+        name=""
+        id="imag"
+        onclick="fungsiKlik()"
+        onmouseout="fungsinoKlik()"
+      >
+        <option value="1">Bola</option>
+        <option value="2">Kubus</option>
+        <option value="3">Prisma Segitiga</option>
+      </select>
+
+      <img id="foto1" src="buled.png" alt="" width="50%" />
+      <img id="foto2" src="kotak.png" alt="" width="50%" />
+      <img id="foto3" src="prisma.png" alt="" width="55%" />
+    </div>
+    <script>
+      const foto = document.getElementById("imag");
+      function fungsiKlik() {
+        if (foto.value == "1") {
+          document.getElementById("foto3").style.display = " none ";
+          document.getElementById("foto2").style.display = " none ";
+          document.getElementById("foto1").style.display = " block ";
+        } else if (foto.value == "2") {
+          document.getElementById("foto3").style.display = " none ";
+          document.getElementById("foto1").style.display = " none ";
+          document.getElementById("foto2").style.display = " block ";
+        } else {
+          document.getElementById("foto1").style.display = " none ";
+          document.getElementById("foto2").style.display = " none ";
+          document.getElementById("foto3").style.display = " block ";
+        }
+      }
+      function fungsinoKlik() {
+        if (foto.value == "1") {
+          alert("ini adalah Bola");
+        } else if (foto.value == "2") {
+          alert("ini adalah Kubus");
+        } else {
+          alert("ini adalah Prisma Segitiga");
+        }
+      }
+    </script>
+  </body>
+</html>
